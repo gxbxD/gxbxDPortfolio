@@ -1,0 +1,105 @@
+/* Sobremim.module.css */
+
+.sobremim {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.sobremimcontainer {
+    background-color: rgba(46, 45, 45, 0.8);
+    border-radius: 20px;
+    box-shadow: 4px 4px 15px purple;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    min-height: 500px;
+    margin: 0;
+    padding: 1rem;
+    padding-top: 2rem;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.front {
+    margin: 0;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+.info {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem;
+    text-align: left;
+}
+
+.profpiccontainer {
+    width: 100%;
+    max-width: 200px;
+    min-width: 150px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0;
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+.profpic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+.flipButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.flipButton:hover {
+    background-color: #9966CC;
+}

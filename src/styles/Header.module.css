@@ -1,0 +1,127 @@
+.Appheader {
+  width: 100%;
+  height: 90px;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 4px 10px purple;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.logoContainer {
+  width: 100%;
+  max-width: 80px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0.5rem;
+  padding: 0;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 80px;
+}
+
+nav {
+  width: 70%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+  list-style: none;
+  width: 100%;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+nav > ul > li {
+  color: rgb(223, 7, 223);
+  margin: 1rem;
+  margin-top: 0;
+  padding: 0.5rem 0.1rem;
+  display: block;
+  flex: 1;
+  text-align: center;
+}
+
+nav > ul > li:hover {
+  background-color: #9966CC;
+  border-radius: 15px;
+  color: #000000;
+  cursor: pointer;
+}
+
+li > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.langico {
+  width: 25px;
+  height: 25px;
+}
+
+.homeico {
+  width: 25px;
+  height: 25px;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdownContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdownContent a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdownContent {
+  display: block;
+}
