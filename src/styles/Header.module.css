@@ -27,24 +27,33 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  max-width: 80px;
+  max-width: 200px;
 }
 
 nav {
-  width: 70%;
+  width: 100%; /* Use full width for better responsiveness */
   height: 50px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between; /* Adjust to space between items */
+  padding: 0 1rem; /* Add padding to the nav for better spacing */
+  box-sizing: border-box;
+  align-items: center; /* Center items vertically */
+}
+
+nav .menu-toggle {
+  display: none; /* Hide the menu toggle by default */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 nav > ul {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
   padding-inline-start: 0;
   margin-block: 0;
-  height: 100%;
   list-style: none;
   width: 100%;
   padding-right: 0;
@@ -53,12 +62,11 @@ nav > ul {
 
 nav > ul > li {
   color: rgb(223, 7, 223);
-  margin: 1rem;
-  margin-top: 0;
+  margin: 0.5rem;
   padding: 0.5rem 0.1rem;
-  display: block;
-  flex: 1;
+  flex: 1 1 auto; /* Allow flex items to shrink and grow */
   text-align: center;
+  min-width: 100px; /* Minimum width to keep items readable */
 }
 
 nav > ul > li:hover {
@@ -73,55 +81,85 @@ li > a {
   text-decoration: none;
 }
 
-.langico {
-  width: 25px;
-  height: 25px;
-}
-
-.homeico {
-  width: 25px;
-  height: 25px;
-}
-
-/* Dropdown container */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown button */
-.dropbtn {
-  background: none;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  color: inherit;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdownContent {
+.menuToggle, .menu {
   display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
 }
 
-/* Links inside the dropdown */
-.dropdownContent a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+.langico, .homeico {
+  width: 25px;
+  height: 25px;
 }
 
-/* Change color of dropdown links on hover */
-.dropdownContent a:hover {
-  background-color: #ddd;
-}
+@media (max-width: 720px) {
+  .Appheader {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdownContent {
-  display: block;
+  .logoContainer {
+    width: 50px; /* Increase the logo size */
+    max-width: 50px; /* Maintain a maximum size */
+    margin: 0; /* Remove margin for better spacing */
+  }
+
+  .logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 150px; /* Ensure the logo doesn't exceed its container */
+  }
+
+  .menuToggle {
+    display: flex;
+    margin: 0;
+    margin-left: auto;
+  }
+
+  nav > ul {
+    display: none; /* Hide the menu */
+    margin: none;
+    box-sizing: border-box;
+    border: none;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 1rem;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 200px;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu > li {
+    padding: 0.5rem 1rem;
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .menu > li:last-child {
+    border-bottom: none;
+  }
+
+  .menu > li:hover {
+    background-color: #f0f0f0;
+  }
+
+  .hidden {
+    display: none;
+  }
 }
