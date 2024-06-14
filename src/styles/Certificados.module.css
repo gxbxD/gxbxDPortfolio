@@ -8,7 +8,7 @@
     justify-content: center;
     box-sizing: border-box;
     padding: 0;
-    margin-top: 4%;
+    margin-top: 2%;
     margin-bottom: 4%;
 }
 
@@ -20,7 +20,7 @@
     width: 100%;
     max-width: 60%;
     margin: 0;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .gdriveico {
@@ -31,4 +31,10 @@
 
 .gdriveico:hover {
     transform: scale(1.1);
+}
+
+@media (max-width: 720px) {
+    .Certificados {
+        margin-top: 4%;
+    }
 }

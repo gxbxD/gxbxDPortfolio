@@ -35,3 +35,16 @@
   .loadMore:hover {
     background-color: #0056b3;
   }
+
+  @media (max-width: 720px) {
+    .projectContainer {
+      overflow-x: scroll;
+      overflow: -moz-scrollbars-none;
+        -ms-overflow-style: none;
+    }
+
+    .projectContainer::-webkit-scrollbar {
+      display: none;
+    }
+
+  }

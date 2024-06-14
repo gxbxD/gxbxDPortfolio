@@ -23,8 +23,8 @@ function Sobremim() {
             </button>
                 </div>
                 <div className={styles.back}>
-                    <h1>Gabriel D'angelo</h1>
                     <div className={styles.info}>
+                        <h1>Gabriel D'angelo</h1>
                         <p>
                             Sou Designer com 7 anos de experiência especializada em restauração de imagens, buscando novos desafios na área de Tecnologia, minha verdadeira paixão. Desde criança, estou imerso no mundo dos computadores, o que despertou em mim um interesse profundo e contínuo por esse campo. Atualmente, estou me dedicando aos estudos de tecnologia há 7 meses, focando em desenvolvimento Fullstack. Tenho experiência em desenvolvimento web e estou ansioso para aplicar e expandir essas habilidades.
 

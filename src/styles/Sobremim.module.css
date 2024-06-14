@@ -63,9 +63,10 @@
     width: 90%;
     height: 80%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     margin: 1.5rem;
     text-align: left;
 }
@@ -91,7 +92,7 @@
 }
 
 .flipButton {
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 10px 20px;
     background-color: purple;
     color: white;
@@ -102,4 +103,28 @@
 
 .flipButton:hover {
     background-color: #9966CC;
+}
+
+@media (max-width: 720px) {
+    .sobremim {
+        margin-top: 8%;
+        margin-bottom: 8%;
+    }
+
+    .sobremimcontainer {
+        width: 92%;
+        padding: ;
+    }
+
+    .info {
+        width: 90%;
+        height: 60%;
+        overflow-y: scroll;
+        overflow: -moz-scrollbars-none;
+        -ms-overflow-style: none;
+    }
+
+    .info::-webkit-scrollbar {
+        display: none;
+    }
 }
