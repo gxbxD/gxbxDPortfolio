@@ -27,7 +27,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  max-width: 200px;
+  max-width: 90px;
 }
 
 nav {
@@ -38,6 +38,7 @@ nav {
   padding: 0 1rem; /* Add padding to the nav for better spacing */
   box-sizing: border-box;
   align-items: center; /* Center items vertically */
+  margin: 0;
 }
 
 nav .menu-toggle {
@@ -81,8 +82,13 @@ li > a {
   text-decoration: none;
 }
 
-.menuToggle, .menu {
-  display: none;
+.menuToggle, .menu, .sumircomisso {
+  overflow: hidden;
+  width: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
+  z-index: -999;
 }
 
 .langico, .homeico {
