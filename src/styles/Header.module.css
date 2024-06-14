@@ -82,13 +82,10 @@ li > a {
   text-decoration: none;
 }
 
-.menuToggle, .menu, .sumircomisso {
-  overflow: hidden;
+.sumircomisso {
   width: 0;
-  border: none;
-  padding: 0;
-  margin: 0;
-  z-index: -999;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 .langico, .homeico {
@@ -113,7 +110,12 @@ li > a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    max-width: 150px; /* Ensure the logo doesn't exceed its container */
+    max-width: 100px; /* Ensure the logo doesn't exceed its container */
+  }
+
+  .sumircomisso {
+    width: auto;
+    visibility: visible;
   }
 
   .menuToggle {
